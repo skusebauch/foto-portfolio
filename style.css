@@ -393,6 +393,7 @@ footer h4 {
   /* burger menu */
   .burger {
     position: relative;
+    cursor: pointer;
   }
   .burger span {
     padding: 0.2rem 2rem;
@@ -417,10 +418,24 @@ footer h4 {
     align-items: center;
     transition: transform 1s ease;
   }
-  .burger-active {
+  .nav-open {
     transform: translateX(-100%);
   }
-  .burger-active ~ .burger span {
+
+  .toggle .line1 {
+    background: white;
+    transform: rotate(45deg) translateY(300%);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    background: white;
+    transform: rotate(-45deg) translateY(-300%);
+  }
+
+  /*.burger-active ~ .burger span {
     background: white;
   }
   .burger-active ~ .burger span:nth-child(1) {
@@ -431,7 +446,7 @@ footer h4 {
   }
   .burger-active ~ .burger span:nth-child(3) {
     transform: rotate(-45deg) translateY(-300%);
-  }
+  }*/
 }
 
 @media screen and (max-width: 450px) {

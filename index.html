@@ -27,7 +27,7 @@
       </nav>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="hero-introduction flex">
           <h2>
             Karin Friedmann <br />
@@ -50,7 +50,7 @@
           <img src="./img/plant2.png" alt="" class="plant2 plant" />
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="about-image">
           <h5>Minimal</h5>
           <img src="./img/about-image.png" alt="portrait-picture" />
@@ -83,9 +83,9 @@
           </div>
         </div>
       </section>
-      <section class="gallery">
+      <section class="gallery" id="work">
         <header class="gallery-head">
-          <h2>Professionelle Fotoshooting</h2>
+          <h2>Professionelles Fotoshooting</h2>
           <p>Kontakieren Sie mich, um einen Termin zu vereinbaren.</p>
         </header>
         <img class="gallery1" src="./img/gallery-1.jpg" alt="man in suit" />
@@ -93,7 +93,38 @@
         <img class="gallery3" src="./img/gallery-3.jpg" alt="lady in t-shirt" />
         <img class="gallery4" src="./img/gallery-4.jpg" alt="lady in jacket" />
       </section>
+      <section class="contact">
+        <div class="form-wrapper flex">
+          <h2>Get in <br /><span>touch.</span></h2>
+          <form action="">
+            <label for="email">E-Mail-Adresse:</label>
+            <input type="email" id="email" required />
+            <button type="submit">Senden</button>
+          </form>
+        </div>
+        <img src="./img/contact-image.jpg" alt="karin-friedmann" />
+      </section>
     </main>
+    <footer>
+      <h4>Karin Friedmann &copy; 2020</h4>
+      <ul>
+        <li>
+          <a href="#"
+            ><img src="./img/youtube-symbol 1.svg" alt="youtube-social-media"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./img/twitter 1.svg" alt="twitter-social-media"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./img/instagram 1.svg" alt="instagram-social-media"
+          /></a>
+        </li>
+      </ul>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>

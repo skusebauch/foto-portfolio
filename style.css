@@ -21,12 +21,12 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  --header1: calc(4rem + 1vw);
+  --header1: calc(2rem + 1vw);
   --header2: calc(3.5rem + 1vw);
   --header3: calc(3rem + 1vw);
   --header4: calc(2.4rem + 1vw);
   --text: calc(1.5rem + 1vw);
-  --big: calc(2.4rem + 1vw);
+  --big: calc(6rem + 1vw);
   --special-color: #906272;
   --background-color: #414141;
   --gray-text-color: #525252;
@@ -282,6 +282,76 @@ nav {
 .gallery-head p {
   opacity: 0.8;
 }
+
+/* contact section */
+.contact {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-wrapper {
+  flex: 3 1 40rem;
+}
+
+.form-wrapper h2 {
+  margin: 5rem 0rem;
+}
+
+.form-wrapper span {
+  font-size: var(--big);
+  color: var(--special-color);
+}
+
+.form-wrapper label {
+  display: block;
+  color: var(--gray-text-color);
+  margin-bottom: -1.5rem;
+}
+
+.form-wrapper input {
+  display: block;
+  margin: 3rem 0rem;
+  background: var(--background-color);
+  color: white;
+  border: none;
+  padding: 1.5rem;
+}
+
+.form-wrapper button {
+  padding: 1.5rem 8rem;
+  background: var(--special-color);
+  color: white;
+  border: none;
+  width: 100%;
+}
+
+.contact img {
+  flex: 1 1 40rem;
+}
+
+/* Footer */
+footer {
+  background: var(--background-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 5rem 5%;
+  flex-wrap: wrap;
+}
+footer ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer h4 {
+  flex: 4 1 40rem;
+  font-size: calc(1.4rem + 1vw);
+  font-weight: 400;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 842px) {
@@ -305,6 +375,20 @@ nav {
   }
   .gallery-head {
     display: none;
+  }
+  /* contact section */
+  .contact img {
+    display: none;
+  }
+  /* footer */
+  footer h4 {
+    order: 2;
+    text-align: center;
+    padding: 2rem;
+  }
+  footer ul {
+    order: 1;
+    padding: 2rem;
   }
   /* burger menu */
   .burger {
@@ -353,5 +437,15 @@ nav {
 @media screen and (max-width: 450px) {
   .gallery img {
     height: auto;
+  }
+}
+@media screen and (min-width: 1700px) {
+  html {
+    --header1: 3rem;
+    --header2: 5rem;
+    --header3: 4rem;
+    --header4: 3rem;
+    --text: 3rem;
+    --big: 8rem;
   }
 }

@@ -123,6 +123,7 @@ nav {
 
 .hero-introduction p {
   padding: 5rem 10rem;
+  color: var(--gray-text-color);
 }
 
 .hero-introduction h2 {
@@ -190,8 +191,61 @@ nav {
   }
 }
 
+/* about section */
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1 1 40rem;
+  position: relative;
+}
+.about-text {
+  flex: 2 1 40rem;
+  justify-content: space-around;
+  background: var(--background-color);
+  color: white;
+}
+.about-text div {
+  padding: 3rem 8rem;
+}
+.about-text h3 {
+  padding: 2rem 0rem;
+  font-family: "Ruhl Medium";
+}
+
+.about-text h2 {
+  font-family: "Vibes";
+  padding: 4rem;
+}
+.about-image h5 {
+  position: absolute;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 /* Media Queries */
 @media screen and (max-width: 842px) {
+  .hero {
+    width: 100%;
+  }
+  .hero-introduction p {
+    padding: 5rem 3rem;
+  }
+  /* about section */
+  .about-text div {
+    padding: 3rem;
+  }
   /* burger menu */
   .burger {
     position: relative;
@@ -233,12 +287,5 @@ nav {
   }
   .burger-active ~ .burger span:nth-child(3) {
     transform: rotate(-45deg) translateY(-300%);
-  }
-  /* other classes */
-  .hero {
-    width: 100%;
-  }
-  .hero-introduction p {
-    padding: 5rem 3rem;
   }
 }

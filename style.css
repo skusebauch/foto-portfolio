@@ -156,6 +156,7 @@ nav {
   animation: plant-entrance 1.5s ease-in-out 0.5s forwards,
     plant-shake 2.5s infinite ease alternate-reverse 2s;
   transform-origin: bottom;
+  max-height: 80%;
 }
 .plant2 {
   left: 40%;
@@ -191,6 +192,7 @@ nav {
 
 /* Media Queries */
 @media screen and (max-width: 842px) {
+  /* burger menu */
   .burger {
     position: relative;
   }
@@ -224,12 +226,19 @@ nav {
     background: white;
   }
   .burger-active ~ .burger span:nth-child(1) {
-    transform: rotateZ(45deg) translateY(300%);
+    transform: rotate(45deg) translateY(300%);
   }
   .burger-active ~ .burger span:nth-child(2) {
     opacity: 0;
   }
   .burger-active ~ .burger span:nth-child(3) {
-    transform: rotateZ(-45deg) translateY(-300%);
+    transform: rotate(-45deg) translateY(-300%);
+  }
+  /* other classes */
+  .hero {
+    width: 100%;
+  }
+  .hero-introduction p {
+    padding: 5rem 3rem;
   }
 }

@@ -1,4 +1,7 @@
 const burger = document.querySelector(".burger");
+const burgerLink = document.querySelector(".nav-links-burger");
+const burgerLinks = burgerLink.querySelectorAll("li");
+console.log(burgerLinks);
 
 //burger.addEventListener("click", () => {
 //  nav.classList.toggle("nav-open");
@@ -13,9 +16,20 @@ const burger = document.querySelector(".burger");
 //});
 
 burger.addEventListener("click", navToggle);
+burgerLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    burger.classList.remove("active");
+    gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "black" });
+    gsap.to(".line2", 0.5, { opacity: "1" });
+    gsap.to(".line3", 0.5, { rotate: "0", y: 0, background: "black" });
+    gsap.to("#logo", 1, { color: "black" });
+    gsap.to(".nav-bar", 1, { clipPath: "circle(50px at 100% -20%" });
+    document.body.classList.remove("hide");
+  });
+});
 
 function navToggle(event) {
-  console.log(event);
+  console.log(event.target);
   if (!event.target.classList.contains("active")) {
     event.target.classList.add("active");
     gsap.to(".line1", 0.5, { rotate: "45", y: 9, background: "white" });

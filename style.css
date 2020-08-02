@@ -434,6 +434,7 @@ body.hide {
     background: var(--gray-text-color);
     margin: 0.5rem 0rem;
     display: block;
+    pointer-events: none;
   }
   .nav-links-burger a {
     color: white;

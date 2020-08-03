@@ -64,12 +64,11 @@ function animateSlides() {
       defaults: { duration: 1, ease: "power2.inOut" },
     });
     slideTl.fromTo(revealImg, { x: "0%" }, { x: "100%" });
-    slideTl.fromTo(mainHeader, { y: "-100%" }, { y: "0%" }, "-=0.5");
+    //slideTl.fromTo(mainHeader, { y: "-100%" }, { y: "0%" }, "-=0.5");
     // Create Scene Scroll Animation
     slideScene = new ScrollMagic.Scene({
       triggerElement: slide,
       triggerHook: 0.8,
-      reverse: false,
     })
       //.addIndicators({
       //  colorStart: "black",

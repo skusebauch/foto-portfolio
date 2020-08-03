@@ -53,6 +53,7 @@ function navToggle(event) {
 // animation slide
 let controller;
 let slideScene;
+let pageScene;
 
 function animateSlides() {
   // init controller
@@ -60,14 +61,27 @@ function animateSlides() {
   // select some things
   const sliders = document.querySelectorAll(".slide");
   const mainHeader = document.querySelector(".nav");
-  sliders.forEach((slide) => {
+  sliders.forEach((slide, index, slides) => {
     const revealImg = slide.querySelector(".reveal-img");
-    //gsap
+    //gsap - slideTl
     const slideTl = gsap.timeline({
       defaults: { duration: 1, ease: "power2.inOut" },
     });
     slideTl.fromTo(revealImg, { x: "0%" }, { x: "100%" });
     slideTl.fromTo(mainHeader, { y: "-100%" }, { y: "0%" }, "-=0.5");
+    // Create Scene Scroll Animation
+    slideScene = new ScrollMagic.Scene({
+      triggerElement: slide,
+      triggerHook: 0.8,
+      reverse: false,
+    })
+      //.addIndicators({
+      //  colorStart: "black",
+      //  colorTrigger: "black",
+      //  name: "slide",
+      //})
+      .setTween(slideTl)
+      .addTo(controller);
   });
 }
 animateSlides();

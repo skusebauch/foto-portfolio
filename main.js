@@ -1,8 +1,6 @@
 const burger = document.querySelector(".burger");
 const burgerLink = document.querySelector(".nav-links-burger");
 const burgerLinks = burgerLink.querySelectorAll("li");
-console.log(burgerLinks);
-
 //burger.addEventListener("click", () => {
 //  nav.classList.toggle("nav-open");
 //  burger.classList.toggle("toggle");
@@ -14,7 +12,6 @@ console.log(burgerLinks);
 //    burger.classList.toggle("toggle");
 //  });
 //});
-
 burger.addEventListener("click", navToggle);
 burgerLinks.forEach((link) => {
   link.addEventListener("click", () => {
@@ -29,7 +26,6 @@ burgerLinks.forEach((link) => {
 });
 
 function navToggle(event) {
-  console.log(event.target);
   if (!event.target.classList.contains("active")) {
     event.target.classList.add("active");
     gsap.to(".line1", 0.5, { rotate: "45", y: 9, background: "white" });
